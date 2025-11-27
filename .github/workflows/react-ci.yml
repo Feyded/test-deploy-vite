@@ -32,11 +32,11 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.FTP_HOST }} # your FTP host
-          username: ${{ secrets.FTP_USER }} # FTP username
-          password: ${{ secrets.FTP_PASS }} # FTP password
-          port: ${{ secrets.FTP_PORT }} # usually 21
-          protocol: ftp # use ftp or ftps
-          local-dir: dist # folder to upload
-          server-dir: /public_html/test-deploy # destination folder on server
-          passive: true # enable passive mode
+          server: ${{ secrets.FTP_HOST }} 
+          username: ${{ secrets.FTP_USER }} 
+          password: ${{ secrets.FTP_PASS }} 
+          port: ${{ secrets.FTP_PORT }} 
+          protocol: ftp 
+          local-dir: dist/ 
+          server-dir: /public_html/test-deploy 
+          passive: true 
