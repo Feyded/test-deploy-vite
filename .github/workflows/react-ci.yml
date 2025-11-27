@@ -1,13 +1,11 @@
-name: React CI
+name: React CI + Deploy
 
 on:
   push:
     branches: ["production"]
-  pull_request:
-    branches: ["production"]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,3 +28,15 @@ jobs:
 
       - name: Run lint
         run: pnpm lint
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_HOST }} # your FTP host
+          username: ${{ secrets.FTP_USER }} # FTP username
+          password: ${{ secrets.FTP_PASS }} # FTP password
+          port: ${{ secrets.FTP_PORT }} # usually 21
+          protocol: ftp # use ftp or ftps
+          local-dir: dist # folder to upload
+          server-dir: /public_html/test-deploy # destination folder on server
+          passive: true # enable passive mode
