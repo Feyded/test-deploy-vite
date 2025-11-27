@@ -38,4 +38,4 @@ jobs:
           port: ${{ secrets.FTP_PORT }} 
           protocol: ftp 
           local-dir: dist/ 
-          server-dir: /public_html/test-deploy 
+          server-dir: /public_html/test-deploy/ 
