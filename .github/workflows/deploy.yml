@@ -32,10 +32,12 @@ jobs:
       - name: Deploy via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.SFTP_HOST }} 
-          port: ${{ secrets.SFTP_PORT }} 
+          server: ${{ secrets.SFTP_HOST }}
+          port: ${{ secrets.SFTP_PORT }}
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
           local_path: "dist/*"
           remote_path: "/home/u325699793/domains/lascasasgaming.com/public_html/test-deploy"
           sftp_only: true
+          overwrite: true 
+          delete: false
