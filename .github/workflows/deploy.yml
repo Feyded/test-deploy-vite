@@ -39,3 +39,4 @@ jobs:
           local_path: "dist/*"
           remote_path: "/public_html/test-deploy"
           sftp_only: true
+          overwrite: true 
