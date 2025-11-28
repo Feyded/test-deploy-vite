@@ -29,13 +29,13 @@ jobs:
       - name: Run lint
         run: pnpm lint
 
-      - name: Deploy via FTP
+      - name: Deploy via SFTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_HOST }} 
           username: ${{ secrets.FTP_USER }} 
           password: ${{ secrets.FTP_PASS }} 
           port: ${{ secrets.FTP_PORT }} 
-          protocol: ftp 
+          protocol: sftp 
           local-dir: dist/ 
           server-dir: /public_html/test-deploy/ 
