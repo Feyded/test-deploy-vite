@@ -37,5 +37,5 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           local_path: "dist/*"
-          remote_path: "home/u325699793/public_html/test-deploy"
+          remote_path: "/u325699793/domains/lascasasgaming.com/public_html/test-deploy"
           sftp_only: true
