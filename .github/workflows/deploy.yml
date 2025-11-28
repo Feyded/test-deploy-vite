@@ -36,6 +36,6 @@ jobs:
           username: ${{ secrets.FTP_USER }} 
           password: ${{ secrets.FTP_PASS }} 
           port: ${{ secrets.FTP_PORT }} 
-          protocol: sftp 
+          protocol: ftps 
           local-dir: dist/ 
           server-dir: /public_html/test-deploy/ 
