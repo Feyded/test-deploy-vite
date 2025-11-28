@@ -29,7 +29,6 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <p>add line</p>
-      <p>add another line</p>
     </>
   )
 }
