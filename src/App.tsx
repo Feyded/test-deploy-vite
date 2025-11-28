@@ -28,7 +28,6 @@ function App() {
       <p className="read-the-docs">
         this is a sample
       </p>
-      <p>add lines</p>
     </>
   )
 }
