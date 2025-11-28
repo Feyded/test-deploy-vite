@@ -39,5 +39,4 @@ jobs:
           local_path: "dist/*"
           remote_path: "/home/u325699793/domains/lascasasgaming.com/public_html/test-deploy"
           sftp_only: true
-          overwrite: true 
-          delete: false
+          delete_remote_files: false          
