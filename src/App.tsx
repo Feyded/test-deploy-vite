@@ -30,6 +30,7 @@ function App() {
       </p>
       <p>1st</p>
       <p>2nd</p>
+      <p>3rd</p>
     </>
   );
 }
